@@ -14,9 +14,9 @@ function config ($routeProvider) {
         })
         .when('/simulation', {
             templateUrl: 'views/simulation.tpl.html',
-            controller: 'SimulationController'
+            controller: 'CalculationsController'
         })
-        .when('/simulation', {
+        .when('/simulation/:type', {
             templateUrl: 'views/calculate.tpl.html',
             controller: 'CalculationsController'
         })
