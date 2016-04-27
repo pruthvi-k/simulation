@@ -15,6 +15,7 @@ angular.module('app.core')
         $scope.chart_parts_profit = {};
         $scope.chart_sales_profit = {};
         $scope.chart_gross_profit = {};
+        $scope.isStaticSimulationSet = false;
 
         switch ($routeParams.type) {
             case 'customer-retention':
@@ -358,14 +359,25 @@ angular.module('app.core')
             }
         }
 
-        $scope.isStaticSimulationSet = false;
+
+
+        //body_turn_around_time depends on two values so added separately
+        $scope.$watch('simulation.body_turn_around_time', function() {
+            $scope.simulation.body_throughput = $scope.get_body_throughput();
+        })
+
+        $scope.$watch('simulation.service_throughput', function() {
+            $scope.simulation.body_throughput = $scope.get_body_throughput();
+        })
 
         $scope.$watch('simulation', function() {
             $scope.simulation.projected_yearly_load = $scope.get_projected_yearly_load();
             $scope.simulation.service_throughput = $scope.get_service_throughput();
 
             $scope.simulation.ew_sales = $scope.get_ew_sales();
-            $scope.simulation.body_throughput = $scope.get_body_throughput();
+            if($scope.isStaticSimulationSet == false) {
+                $scope.simulation.body_throughput = $scope.get_body_throughput();
+            }
 
             $scope.simulation.total_parts = $scope.get_total_parts();
             $scope.simulation.body_total_parts = $scope.get_body_total_parts();
@@ -446,6 +458,9 @@ angular.module('app.core')
         }
 
 
+        $scope.resetForm = function(){
+            $scope.simulation = angular.copy($scope.static_simulation);
+        }
 
 
     });
