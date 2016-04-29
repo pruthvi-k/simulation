@@ -195,7 +195,7 @@ button.btn:focus {
   background-color: rgba(0, 0, 0, 0.7);
 }
 .ngdialog.ngdialog-theme-default .ngdialog-content {
-  width: 750px !important;
+  width: 900px !important;
   margin-right: 0;
   height: auto !important;
   border-radius: 0;
