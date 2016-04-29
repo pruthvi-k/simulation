@@ -10,9 +10,14 @@ body{
 
 h2{
   margin: 5px 0 10px !important;
-  font-size: 14px !important;
+  font-size: 24px !important;
+  border-bottom: 1px solid #ABABAB;
+  padding-bottom: 10px;
   font-weight: bold;
-  text-align: center !important;
+}
+h1{
+  font-weight: bold;
+  font-size: 16px !important;
 }
 
 
@@ -29,10 +34,15 @@ h2{
   font-size: 13px !important;
   font-weight: 400 !important;
   padding-top: 4px !important;
+  text-align: left !important;
 }
 .col-md-3, .col-md-6{
   padding-right: 10px !important;
   padding-left: 10px !important;
+}
+.col-md-12{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 input{
   border: 1px solid #ccc !important;
@@ -102,7 +112,7 @@ input{
         height: 635px;
         position: relative;
         .overly-tile{
-          background: url("../views/img/banner_main_2.png") no-repeat center center;
+          background: #000 url("../views/img/banner_main_2.png") no-repeat center center;
           position: absolute;
           top: 0;
           left: 0;
@@ -173,8 +183,11 @@ input{
   }
 }
 .ngdialog-close{
+  margin-right: 10px;
+  margin-top: 10px;
   &::before{
     color: grey !important;
+    font-size: 35px !important;
   }
   &:hover{
     &::before{
@@ -196,13 +209,23 @@ button.btn{
 }
 .ngdialog{
   &.ngdialog-theme-default {
-    padding-top: 110px !important;
+    width: 1240px;
+    margin: 110px auto 0;
+    height: 635px;
+    padding: 0 0 0 0 !important;
+    background-color: rgba(0,0,0,0.7);
     .ngdialog-content {
-      width: 1240px !important;
-      height: 635px !important;
+      width: 750px !important;
+      margin-right: 0;
+      height: auto !important;
       border-radius: 0;
       background: #fff !important;
       padding: 40px;
+      .graph{
+        border-top: 1px solid #ABABAB;
+        padding-top: 30px;
+        margin-top: 20px;
+      }
     }
   }
 }
@@ -213,6 +236,9 @@ button.btn{
 .page-about {
     background: #fff !important;
     color: #000 !important;
+    .control-label{
+      text-align: right !important;
+    }
 }
 .page {
     padding: 40px !important;
@@ -221,6 +247,23 @@ button.btn{
     text-align: center;
     top: 0;
     width: 100%;
+    a{
+      margin-top: 0 !important;
+    }
+}
+
+.years-list{
+  ul{
+    text-align: left;
+    display: inline-block;
+    margin: 30px auto 0;
+    li{
+      font-size: 13px;
+      font-weight: 400;
+      margin-bottom: 5px;
+      list-style-type: decimal;
+    }
+  }
 }
 
 @-webkit-keyframes pulse {

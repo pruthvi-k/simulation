@@ -8,9 +8,9 @@ angular
         //Set page title and description
         PageValues.title = "HOME";
         PageValues.description = "Simulation project for TATA";
-        console.log("i am inside home ctrl ");
+
         $scope.message = "welcome";
-        $scope.pageClass = 'page-home';
+        $scope.pageClass = 'page-about';
         $scope.showSimulationPopup = function (tpl) {
             ngDialog.open({
                 template: 'views/partial/'+tpl+'.tpl.html',

@@ -334,11 +334,11 @@ function calculateSimulation() {
 
     factory.get_after_sales_gross_profit = function() {
         //=I19+I20+D27+D29+D31
-        console.log(" gross",factory.simulation.service_bodyshop_gross_profit);
-        console.log(" parts",factory.simulation.spare_parts_gross_profit);
-        console.log(" acc",factory.simulation.profit_acc_sales);
-        console.log(" service",factory.simulation.profit_service_pack);
-        console.log(" ew",factory.simulation.profit_ew_sale);
+        //console.log(" gross",factory.simulation.service_bodyshop_gross_profit);
+        //console.log(" parts",factory.simulation.spare_parts_gross_profit);
+        //console.log(" acc",factory.simulation.profit_acc_sales);
+        //console.log(" service",factory.simulation.profit_service_pack);
+        //console.log(" ew",factory.simulation.profit_ew_sale);
 
 
         var val = Math.round(factory.simulation.service_bodyshop_gross_profit) +
