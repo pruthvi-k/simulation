@@ -71,11 +71,11 @@ input{
 .container-home{
   width: 100%;
   .container-inner{
-    width: 1400px;
-    height: 830px;
+    width: 1024px;
+    height: 768px;
     margin: 0 auto;
     background: #000;
-    padding: 0 80px;
+    padding: 0;
     .header{
       height: 110px;
       background: #000;
@@ -113,7 +113,7 @@ input{
         height: 635px;
         position: relative;
         .overly-tile{
-          background: #000 url("../views/img/banner_main_2.png") no-repeat center center;
+          background: #000 url("../views/img/banner_main_3.png") no-repeat center center;
           position: absolute;
           top: 0;
           left: 0;
@@ -146,13 +146,13 @@ input{
               }
             }
             &.hotspot-1{
-              top: 69px;
-              left: 359px;
+              top: 57px;
+              left: 250px;
               width: 224px;
             }
             &.hotspot-2{
-              top: 346px;
-              left: 251px;
+              top: 334px;
+              left: 190px;
               width: 264px;
               -webkit-animation-delay: 0.25s;
               -moz-animation-delay: 0.25s;
@@ -160,8 +160,8 @@ input{
               animation-delay: 0.25s;
             }
             &.hotspot-3{
-              top: 159px;
-              right: 215px;
+              top: 74px;
+              right: 183px;
               width: 184px;
               -webkit-animation-delay: 0.5s;
               -moz-animation-delay: 0.5s;
@@ -169,8 +169,8 @@ input{
               animation-delay: 0.5s;
             }
             &.hotspot-4{
-              top: 286px;
-              left: 75px;
+              top: 274px;
+              left: 33px;
               width: 184px;
               -webkit-animation-delay: 0.75s;
               -moz-animation-delay: 0.75s;
@@ -210,18 +210,21 @@ button.btn{
 }
 .ngdialog{
   &.ngdialog-theme-default {
-    width: 1240px;
+    width: 1024px;
     margin: 110px auto 0;
     height: 635px;
     padding: 0 0 0 0 !important;
     background-color: rgba(0,0,0,0.7);
     .ngdialog-content {
-      width:900px !important;
-      margin-right: 0;
+      width: 960px !important;
+      margin: 0 auto;
       height: auto !important;
       border-radius: 0;
       background: #fff !important;
       padding: 40px;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
       .graph{
         border-top: 1px solid #ABABAB;
         padding-top: 30px;
@@ -247,7 +250,11 @@ button.btn{
     position: absolute;
     text-align: center;
     top: 0;
-    width: 100%;
+    width: 1024px !important;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     a{
       margin-top: 0 !important;
     }

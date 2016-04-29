@@ -127,42 +127,23 @@ angular.module('app.core')
                 series:["Initial", "Changed"],
                 data:[
                     [
-                        calcService.static_simulation.service_bodyshop_gross_profit,
-                        calcService.static_simulation.spare_parts_gross_profit,
-                        calcService.static_simulation.after_sales_gross_profit,
-                        calcService.static_simulation.after_sales_gross_profit_age
+                        Math.round(calcService.static_simulation.service_bodyshop_gross_profit),
+                        Math.round(calcService.static_simulation.spare_parts_gross_profit),
+                        Math.round(calcService.static_simulation.after_sales_gross_profit),
+                        Math.round(calcService.static_simulation.after_sales_gross_profit_age)
                     ],
                     [
-                        $scope.simulation.service_bodyshop_gross_profit,
-                        $scope.simulation.spare_parts_gross_profit,
-                        $scope.simulation.after_sales_gross_profit,
-                        $scope.simulation.after_sales_gross_profit_age
+                        Math.round($scope.simulation.service_bodyshop_gross_profit),
+                        Math.round($scope.simulation.spare_parts_gross_profit),
+                        Math.round($scope.simulation.after_sales_gross_profit),
+                        Math.round($scope.simulation.after_sales_gross_profit_age)
                     ]
-                ],
-                //options: {barShowStroke : false}
+                ]
             };
 
 
         }
 
-        //$scope.watch('calcService.simulation',function(){
-        //    console.log([
-        //            calcService.static_simulation.service_bodyshop_gross_profit,
-        //            calcService.static_simulation.spare_parts_gross_profit,
-        //            calcService.static_simulation.after_sales_gross_profit,
-        //            calcService.static_simulation.after_sales_gross_profit_age
-        //        ],
-        //        [
-        //            $scope.simulation.service_bodyshop_gross_profit,
-        //            $scope.simulation.spare_parts_gross_profit,
-        //            $scope.simulation.after_sales_gross_profit,
-        //            $scope.simulation.after_sales_gross_profit_age
-        //        ]);
-        //});
-        //
-        //$scope.$on('update', function (event, chart) {
-        //    console.log(chart);
-        //});
 
         $scope.resetForm = function(){
             calcService.simulation = angular.copy(calcService.static_simulation);

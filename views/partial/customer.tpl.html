@@ -1,22 +1,22 @@
 
         <form class="form-horizontal">
-            <div class="col-md-12"><h2>Customer Retention</h2></div>
+            <div class="col-md-12 col-sm-12"><h2>Customer Retention</h2></div>
 
             <div class="form-group">
-                <label class="col-md-6 control-label" for="veh_park">Vehicle Park</label>
-                <div class="col-md-3">
-                    <input disabled ng-model="static_simulation.vehicle_park"   placeholder="placeholder" class="form-control input-md" type="text">
+                <label class="col-md-6 col-sm-6 control-label" for="veh_park">Vehicle Park</label>
+                <div class="col-md-3 col-sm-3">
+                    <input disabled ng-model="static_simulation.vehicle_park" round-number  placeholder="placeholder" class="form-control input-md" type="text">
                 </div>
 
-                <div class="col-md-3">
-                    <input id="veh_park" name="vehicle_park" ng-model="simulation.vehicle_park"  placeholder="placeholder" class="form-control input-md" type="text">
+                <div class="col-md-3 col-sm-3">
+                    <input id="veh_park" name="vehicle_park" round-number ng-model="simulation.vehicle_park"  placeholder="placeholder" class="form-control input-md" type="text">
                 </div>
 
             </div>
 
             <div class="form-group">
-                <label class="col-md-6 control-label" for="c_ret0">Customer Retention  0~4 yrs</label>
-                <div class="col-md-3">
+                <label class="col-md-6 col-sm-6 control-label" for="c_ret0">Customer Retention  0~4 yrs</label>
+                <div class="col-md-3 col-sm-3">
                     <div class="input-group">
                         <input disabled ng-model="static_simulation.customer_retention_0_4_yrs"  placeholder="placeholder" class="form-control input-md" type="text">
                         <div class="input-group-addon">%</div>
@@ -24,7 +24,7 @@
 
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-3">
                     <div class="input-group">
                         <input id="c_ret0"  name="customer_retention_0_4_yrs" ng-model="simulation.customer_retention_0_4_yrs"  placeholder="placeholder" class="form-control input-md" type="text">
                         <div class="input-group-addon">%</div>
@@ -33,15 +33,15 @@
             </div>
 
             <div class="form-group">
-                <label class="col-md-6 control-label" for="c_ret4">Customer Retention  4~8 yrs</label>
-                <div class="col-md-3">
+                <label class="col-md-6 col-sm-6 control-label" for="c_ret4">Customer Retention  4~8 yrs</label>
+                <div class="col-md-3 col-sm-3">
                     <div class="input-group">
                         <input disabled ng-model="static_simulation.customer_retention_4_8_yrs"  placeholder="placeholder" class="form-control input-md" type="text">
                         <div class="input-group-addon">%</div>
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-3">
                     <div class="input-group">
                         <input id="c_ret4"  name="customer_retention_4_8_yrs" ng-model="simulation.customer_retention_4_8_yrs"  placeholder="placeholder" class="form-control input-md" type="text">
                         <div class="input-group-addon">%</div>
@@ -50,15 +50,15 @@
             </div>
 
             <div class="form-group">
-                <label class="col-md-6 control-label" for="c_ret8">Customer Retention  8~12 yrs</label>
-                <div class="col-md-3">
+                <label class="col-md-6 col-sm-6 control-label" for="c_ret8">Customer Retention  8~12 yrs</label>
+                <div class="col-md-3 col-sm-3">
                     <div class="input-group">
                         <input disabled ng-model="static_simulation.customer_retention_8_12_yrs"  placeholder="placeholder" class="form-control input-md" type="text">
                         <div class="input-group-addon">%</div>
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-3">
                     <div class="input-group">
                         <input id="c_ret8"  name="customer_retention_8_12_yrs" ng-model="simulation.customer_retention_8_12_yrs"  placeholder="placeholder" class="form-control input-md" type="text">
                         <div class="input-group-addon">%</div>
@@ -67,15 +67,15 @@
             </div>
 
             <div class="form-group">
-                <label class="col-md-6 control-label" for="c_ret12">Customer Retention >12 yrs</label>
-                <div class="col-md-3">
+                <label class="col-md-6 col-sm-6 control-label" for="c_ret12">Customer Retention >12 yrs</label>
+                <div class="col-md-3 col-sm-3">
                     <div class="input-group">
                         <input disabled ng-model="static_simulation.customer_retention_12_yrs"  placeholder="placeholder" class="form-control input-md" type="text">
                         <div class="input-group-addon">%</div>
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-3">
                     <div class="input-group">
                         <input id="c_ret12"  name="customer_retention_12_yrs" ng-model="simulation.customer_retention_12_yrs"  placeholder="placeholder" class="form-control input-md" type="text">
                         <div class="input-group-addon">%</div>
@@ -84,13 +84,13 @@
             </div>
 
             <div class="form-group">
-                <label class="col-md-6 control-label" for="pyl">Projected yearly load</label>
-                <div class="col-md-3">
-                    <input disabled ng-model="static_simulation.projected_yearly_load"  placeholder="placeholder" class="form-control input-md" type="text">
+                <label class="col-md-6 col-sm-6 control-label" for="pyl">Projected yearly load</label>
+                <div class="col-md-3 col-sm-3">
+                    <input disabled ng-model="static_simulation.projected_yearly_load" round-number placeholder="placeholder" class="form-control input-md" type="text">
                 </div>
 
-                <div class="col-md-3">
-                    <input id="pyl" disabled name="projected_yearly_load" ng-model="simulation.projected_yearly_load"  placeholder="placeholder" class="form-control input-md" type="text">
+                <div class="col-md-3 col-sm-3">
+                    <input id="pyl" disabled round-number name="projected_yearly_load" ng-model="simulation.projected_yearly_load"  placeholder="placeholder" class="form-control input-md" type="text">
                 </div>
             </div>
         </form>
