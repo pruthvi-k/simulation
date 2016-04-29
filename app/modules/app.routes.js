@@ -10,12 +10,13 @@ function config ($routeProvider) {
     $routeProvider.
         when('/', {
             templateUrl: 'views/home.tpl.html',
-            controller: 'HomeController as home'
+            controller: 'HomeController'
+            //controller: 'HomeController as home'
         })
-        .when('/simulation', {
-            templateUrl: 'views/simulation.tpl.html',
-            controller: 'CalculationsController'
-        })
+        //.when('/simulation', {
+        //    templateUrl: 'views/simulation.tpl.html',
+        //    controller: 'CalculationsController'
+        //})
         .when('/simulation/:type', {
             templateUrl: 'views/calculate.tpl.html',
             controller: 'CalculationsController'

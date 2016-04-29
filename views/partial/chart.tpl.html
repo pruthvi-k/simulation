@@ -1,0 +1,31 @@
+<div class="row graph" ng-controller="CalculationsController">
+    <div class="col-md-2">
+        <canvas id="bar" class="chart chart-bar"
+                chart-data="chart_shop_profit.data" chart-labels="chart_shop_profit.labels" chart-series="chart_shop_profit.series">
+        </canvas>
+
+        <label>Service & Body Shop Profit</label>
+    </div>
+
+    <div class="col-md-2">
+        <canvas id="bar2" class="chart chart-bar"
+                chart-data="chart_parts_profit.data" chart-labels="chart_parts_profit.labels" chart-series="chart_parts_profit.series">
+        </canvas>
+        <label>Spare Parts Profit</label>
+    </div>
+
+    <div class="col-md-2">
+        <canvas id="bar3" class="chart chart-bar"
+                chart-data="chart_sales_profit.data" chart-labels="chart_sales_profit.labels" chart-series="chart_sales_profit.series">
+        </canvas>
+        <label>Gross After Sales Profit</label>
+    </div>
+
+    <div class="col-md-2">
+        <canvas id="bar4" class="chart chart-bar"
+                chart-data="chart_gross_profit.data" chart-labels="chart_gross_profit.labels" chart-series="chart_gross_profit.series">
+        </canvas>
+        <label>Gross Profit %age</label>
+    </div>
+
+</div>

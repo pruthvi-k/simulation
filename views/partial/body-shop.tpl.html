@@ -1,0 +1,38 @@
+
+
+<div class="row">
+    <h2>Bodyshop</h2>
+</div>
+<div class="row">
+    <div class="form-group">
+        <label class="col-md-6 control-label" for="service_tat">Service Turn Around Time</label>
+        <div class="col-md-3">
+            <input disabled ng-model="static_simulation.service_turn_around_time"  placeholder="placeholder" class="form-control input-md" type="text">
+        </div>
+
+        <div class="col-md-3">
+            <input id="service_tat" name="service_turn_around_time" ng-model="simulation.service_turn_around_time"  placeholder="placeholder" class="form-control input-md" type="text">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <label class="col-md-6 control-label" for="body_tat">Body Turn Around Time</label>
+        <div class="col-md-3">
+            <input disabled ng-model="static_simulation.body_turn_around_time"  placeholder="placeholder" class="form-control input-md" type="text">
+        </div>
+
+        <div class="col-md-3">
+            <input id="body_tat"  name="body_turn_around_time" ng-model="simulation.body_turn_around_time"  placeholder="placeholder" class="form-control input-md" type="text">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="pull-right">
+        <button class="btn btn-danger" ng-click="resetForm()">Reset</button>
+        <a href="#/simulation/productivity" class="btn btn-large btn-primary" ng-click="close()">Show All</a>
+    </div>
+</div>
+
+<div ng-include="'views/partial/chart.tpl.html'"></div>

@@ -1,0 +1,50 @@
+<!--upselling-->
+<div class="row">
+    <h2>Upselling</h2>
+</div>
+<div class="row">
+
+    <div class="form-group">
+        <label class="col-md-6 control-label" for="acc_salec">Accessory sales/car</label>
+        <div class="col-md-3">
+            <input disabled ng-model="static_simulation.accessory_sales_car"  placeholder="placeholder" class="form-control input-md" type="text">
+        </div>
+
+        <div class="col-md-3">
+            <input id="acc_salec"  name="accessory_sales_car" ng-model="simulation.accessory_sales_car"  placeholder="placeholder" class="form-control input-md" type="text">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <label class="col-md-6 control-label" for="acc_sale">Accessory sales</label>
+        <div class="col-md-3">
+            <input disabled ng-model="static_simulation.accessory_sales"  placeholder="placeholder" class="form-control input-md" type="text">
+        </div>
+
+        <div class="col-md-3">
+            <input id="acc_sale" name="accessory_sales" ng-model="simulation.accessory_sales"  placeholder="placeholder" class="form-control input-md" type="text">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <label class="col-md-6 control-label" for="ew_sale">EW sales</label>
+        <div class="col-md-3">
+            <input disabled ng-model="static_simulation.ew_sales" round-number precision="5"  placeholder="placeholder" class="form-control input-md" type="text">
+        </div>
+
+        <div class="col-md-3">
+            <input id="ew_sale" name="ew_sales" ng-model="simulation.ew_sales" round-number precision="5"  placeholder="placeholder" class="form-control input-md" type="text">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="pull-right">
+        <button class="btn btn-danger" ng-click="resetForm()">Reset</button>
+        <a href="#/simulation/productivity" class="btn btn-large btn-primary" ng-click="close()">Show All</a>
+    </div>
+</div>
+
+<div ng-include="'views/partial/chart.tpl.html'"></div>

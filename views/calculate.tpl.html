@@ -7,11 +7,11 @@
             <div class="form-group">
                 <label class="col-md-6 control-label" for="veh_park">Vehicle Park</label>
                 <div class="col-md-3">
-                    <input disabled ng-model="static_simulation.vehicle_park"   placeholder="placeholder" class="form-control input-md" type="text">
+                    <input disabled ng-model="static_simulation.vehicle_park"   placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
 
                 <div class="col-md-3">
-                    <input id="veh_park" name="vehicle_park" disabled ng-model="simulation.vehicle_park"  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input id="veh_park" name="vehicle_park" disabled ng-model="simulation.vehicle_park"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
 
             </div>
@@ -20,7 +20,7 @@
                 <label class="col-md-6 control-label" for="c_ret0">Customer Retention  0~4 yrs</label>
                 <div class="col-md-3">
                     <div class="input-group">
-                        <input disabled ng-model="static_simulation.customer_retention_0_4_yrs"  placeholder="placeholder" class="form-control input-md" type="text">
+                        <input disabled ng-model="static_simulation.customer_retention_0_4_yrs"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                         <div class="input-group-addon">%</div>
                     </div>
 
@@ -28,7 +28,7 @@
 
                 <div class="col-md-3">
                     <div class="input-group">
-                        <input id="c_ret0" ng-disabled="tab.customer_retention" name="customer_retention_0_4_yrs" ng-model="simulation.customer_retention_0_4_yrs"  placeholder="placeholder" class="form-control input-md" type="text">
+                        <input id="c_ret0" ng-disabled="tab.customer_retention" name="customer_retention_0_4_yrs" ng-model="simulation.customer_retention_0_4_yrs"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                         <div class="input-group-addon">%</div>
                     </div>
                 </div>
@@ -38,14 +38,14 @@
                 <label class="col-md-6 control-label" for="c_ret4">Customer Retention  4~8 yrs</label>
                 <div class="col-md-3">
                     <div class="input-group">
-                        <input disabled ng-model="static_simulation.customer_retention_4_8_yrs"  placeholder="placeholder" class="form-control input-md" type="text">
+                        <input disabled ng-model="static_simulation.customer_retention_4_8_yrs"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                         <div class="input-group-addon">%</div>
                     </div>
                 </div>
 
                 <div class="col-md-3">
                     <div class="input-group">
-                    <input id="c_ret4" ng-disabled="tab.customer_retention" name="customer_retention_4_8_yrs" ng-model="simulation.customer_retention_4_8_yrs"  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input id="c_ret4" ng-disabled="tab.customer_retention" name="customer_retention_4_8_yrs" ng-model="simulation.customer_retention_4_8_yrs"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                         <div class="input-group-addon">%</div>
                     </div>
                 </div>
@@ -55,14 +55,14 @@
                 <label class="col-md-6 control-label" for="c_ret8">Customer Retention  8~12 yrs</label>
                 <div class="col-md-3">
                     <div class="input-group">
-                        <input disabled ng-model="static_simulation.customer_retention_8_12_yrs"  placeholder="placeholder" class="form-control input-md" type="text">
+                        <input disabled ng-model="static_simulation.customer_retention_8_12_yrs"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                         <div class="input-group-addon">%</div>
                     </div>
                 </div>
 
                 <div class="col-md-3">
                     <div class="input-group">
-                    <input id="c_ret8" ng-disabled="tab.customer_retention" name="customer_retention_8_12_yrs" ng-model="simulation.customer_retention_8_12_yrs"  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input id="c_ret8" ng-disabled="tab.customer_retention" name="customer_retention_8_12_yrs" ng-model="simulation.customer_retention_8_12_yrs"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                         <div class="input-group-addon">%</div>
                     </div>
                 </div>
@@ -72,14 +72,14 @@
                 <label class="col-md-6 control-label" for="c_ret12">Customer Retention >12 yrs</label>
                 <div class="col-md-3">
                     <div class="input-group">
-                        <input disabled ng-model="static_simulation.customer_retention_12_yrs"  placeholder="placeholder" class="form-control input-md" type="text">
+                        <input disabled ng-model="static_simulation.customer_retention_12_yrs"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                         <div class="input-group-addon">%</div>
                     </div>
                 </div>
 
                 <div class="col-md-3">
                     <div class="input-group">
-                    <input id="c_ret12" ng-disabled="tab.customer_retention" name="customer_retention_12_yrs" ng-model="simulation.customer_retention_12_yrs"  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input id="c_ret12" ng-disabled="tab.customer_retention" name="customer_retention_12_yrs" ng-model="simulation.customer_retention_12_yrs"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                         <div class="input-group-addon">%</div>
                     </div>
                 </div>
@@ -88,11 +88,11 @@
             <div class="form-group">
                 <label class="col-md-6 control-label" for="pyl">Projected yearly load</label>
                 <div class="col-md-3">
-                    <input disabled ng-model="static_simulation.projected_yearly_load"  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input disabled ng-model="static_simulation.projected_yearly_load"   placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
 
                 <div class="col-md-3">
-                    <input id="pyl" disabled name="projected_yearly_load" ng-model="simulation.projected_yearly_load"  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input id="pyl" disabled name="projected_yearly_load"  ng-model="simulation.projected_yearly_load"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
             </div>
 
@@ -102,22 +102,22 @@
             <div class="form-group">
                 <label class="col-md-6 control-label" for="service_tat">Service Turn Around Time</label>
                 <div class="col-md-3">
-                    <input disabled ng-model="static_simulation.service_turn_around_time"  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input disabled ng-model="static_simulation.service_turn_around_time"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
 
                 <div class="col-md-3">
-                    <input id="service_tat" ng-disabled="tab.productivity" name="service_turn_around_time" ng-model="simulation.service_turn_around_time"  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input id="service_tat" ng-disabled="tab.productivity" name="service_turn_around_time" ng-model="simulation.service_turn_around_time"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
             </div>
 
             <div class="form-group">
                 <label class="col-md-6 control-label" for="body_tat">Body Turn Around Time</label>
                 <div class="col-md-3">
-                    <input disabled ng-model="static_simulation.body_turn_around_time"  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input disabled ng-model="static_simulation.body_turn_around_time"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
 
                 <div class="col-md-3">
-                    <input id="body_tat" ng-disabled="tab.productivity && tab.body_shop" name="body_turn_around_time" ng-model="simulation.body_turn_around_time"  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input id="body_tat" ng-disabled="tab.productivity && tab.body_shop" name="body_turn_around_time" ng-model="simulation.body_turn_around_time"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
             </div>
 
@@ -130,33 +130,99 @@
             <div class="form-group">
                 <label class="col-md-6 control-label" for="acc_salec">Accessory sales/car</label>
                 <div class="col-md-3">
-                    <input disabled ng-model="static_simulation.accessory_sales_car"  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input disabled ng-model="static_simulation.accessory_sales_car"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
 
                 <div class="col-md-3">
-                    <input id="acc_salec" ng-disabled="tab.upselling" name="accessory_sales_car" ng-model="simulation.accessory_sales_car"  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input id="acc_salec" ng-disabled="tab.upselling" name="accessory_sales_car" ng-model="simulation.accessory_sales_car"  placeholder="placeholder" round-number class="form-control input-md" type="text">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-6 control-label" for="spsott">Service Package Sales %age of Total Throughput</label>
+                <div class="col-md-3">
+                    <input disabled ng-model="static_simulation.service_package_sale"  placeholder="placeholder" round-number class="form-control input-md" type="text">
+                </div>
+
+                <div class="col-md-3">
+                    <input id="spsott" ng-disabled="tab.upselling" name="service_package_sale" ng-model="simulation.service_package_sale"  placeholder="placeholder" round-number class="form-control input-md" type="text">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-6 control-label" for="estt">EW sales %age of Total Throughput</label>
+                <div class="col-md-3">
+                    <input disabled ng-model="static_simulation.ew_sale_total"  placeholder="placeholder" round-number class="form-control input-md" type="text">
+                </div>
+
+                <div class="col-md-3">
+                    <input id="estt" ng-disabled="tab.upselling" name="ew_sale_total" ng-model="simulation.ew_sale_total"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
             </div>
 
             <div class="form-group">
                 <label class="col-md-6 control-label" for="acc_sale">Accessory sales</label>
                 <div class="col-md-3">
-                    <input disabled ng-model="static_simulation.accessory_sales"  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input disabled ng-model="static_simulation.accessory_sales"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
 
                 <div class="col-md-3">
-                    <input id="acc_sale" disabled name="accessory_sales" ng-model="simulation.accessory_sales"  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input id="acc_sale" disabled name="accessory_sales" ng-model="simulation.accessory_sales"  placeholder="placeholder" round-number class="form-control input-md" type="text">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-6 control-label" for="pfas">Profit from Accessory Sales</label>
+                <div class="col-md-3">
+                    <input disabled ng-model="static_simulation.profit_acc_sales"  placeholder="placeholder" round-number class="form-control input-md" type="text">
+                </div>
+
+                <div class="col-md-3">
+                    <input id="pfas" ng-disabled="tab.upselling" name="profit_acc_sales" ng-model="simulation.profit_acc_sales"  placeholder="placeholder" round-number class="form-control input-md" type="text">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-6 control-label" for="sps">Service package Sales</label>
+                <div class="col-md-3">
+                    <input disabled ng-model="static_simulation.service_pack_sale"  placeholder="placeholder" round-number class="form-control input-md" type="text">
+                </div>
+
+                <div class="col-md-3">
+                    <input id="sps" ng-disabled="tab.upselling" name="service_pack_sale" ng-model="simulation.service_pack_sale"  placeholder="placeholder" round-number class="form-control input-md" type="text">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-6 control-label" for="pfsps">Profit from Service Package sales</label>
+                <div class="col-md-3">
+                    <input disabled ng-model="static_simulation.profit_service_pack"  placeholder="placeholder" round-number class="form-control input-md" type="text">
+                </div>
+
+                <div class="col-md-3">
+                    <input id="pfsps" ng-disabled="tab.upselling" name="profit_service_pack" ng-model="simulation.profit_service_pack"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
             </div>
 
             <div class="form-group">
                 <label class="col-md-6 control-label" for="ew_sale">EW sales</label>
                 <div class="col-md-3">
-                    <input disabled ng-model="static_simulation.ew_sales" round-number precision="5"  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input disabled ng-model="static_simulation.ew_sales"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
 
                 <div class="col-md-3">
-                    <input id="ew_sale" disabled name="ew_sales" ng-model="simulation.ew_sales" round-number precision="5"  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input id="ew_sale" disabled name="ew_sales" ng-model="simulation.ew_sales"  placeholder="placeholder" round-number class="form-control input-md" type="text">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-6 control-label" for="pfes">Profit from EW sales</label>
+                <div class="col-md-3">
+                    <input disabled ng-model="static_simulation.profit_ew_sale"   placeholder="placeholder" round-number class="form-control input-md" type="text">
+                </div>
+
+                <div class="col-md-3">
+                    <input id="pfes" disabled name="profit_ew_sale" ng-model="simulation.profit_ew_sale"   placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
             </div>
 
@@ -170,46 +236,46 @@
             <div class="form-group">
                 <label class="col-md-6 control-label" for="nosb">No of Service Bays</label>
                 <div class="col-md-3">
-                    <input  disabled ng-model="static_simulation.no_of_service_bays" round-number placeholder="placeholder" class="form-control input-md" type="text">
+                    <input  disabled ng-model="static_simulation.no_of_service_bays"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
 
                 <div class="col-md-3">
-                    <input id="nosb" disabled name="no_of_service_bays" ng-model="simulation.no_of_service_bays" round-number placeholder="placeholder" class="form-control input-md" type="text">
+                    <input id="nosb" disabled name="no_of_service_bays" ng-model="simulation.no_of_service_bays"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
             </div>
 
             <div class="form-group">
                 <label class="col-md-6 control-label" for="nobb">No of Bodyshop Bays</label>
                 <div class="col-md-3">
-                    <input disabled ng-model="static_simulation.no_of_bodyshop_bays" round-number placeholder="placeholder" class="form-control input-md" type="text">
+                    <input disabled ng-model="static_simulation.no_of_bodyshop_bays"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
 
                 <div class="col-md-3">
-                    <input id="nobb" disabled name="no_of_bodyshop_bays" ng-model="simulation.no_of_bodyshop_bays" round-number placeholder="placeholder" class="form-control input-md" type="text">
+                    <input id="nobb" disabled name="no_of_bodyshop_bays" ng-model="simulation.no_of_bodyshop_bays"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
             </div>
 
 
             <div class="form-group">
-                <label class="col-md-6 control-label" for="techs">Technicians</label>
+                <label class="col-md-6 control-label" for="techs">Technicians + Denter + Painter</label>
 
                 <div class="col-md-3">
-                    <input disabled ng-model="static_simulation.technicians" round-number  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input disabled ng-model="static_simulation.technicians"   placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
 
                 <div class="col-md-3">
-                    <input id="techs" disabled name="technicians" ng-model="simulation.technicians" round-number  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input id="techs" disabled name="technicians" ng-model="simulation.technicians"   placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
             </div>
 
             <div class="form-group">
                 <label class="col-md-6 control-label" for="serv_a">Service Adviser</label>
                 <div class="col-md-3">
-                    <input disabled ng-model="static_simulation.service_advisor" round-number  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input disabled ng-model="static_simulation.service_advisor"   placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
 
                 <div class="col-md-3">
-                    <input id="serv_a" disabled name="service_advisor" ng-model="simulation.service_advisor" round-number  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input id="serv_a" disabled name="service_advisor" ng-model="simulation.service_advisor"   placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
             </div>
 
@@ -217,11 +283,11 @@
             <div class="form-group">
                 <label class="col-md-6 control-label" for="cust_car">Customer Care</label>
                 <div class="col-md-3">
-                    <input disabled ng-model="static_simulation.customer_care" round-number placeholder="placeholder" class="form-control input-md" type="text">
+                    <input disabled ng-model="static_simulation.customer_care"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
 
                 <div class="col-md-3">
-                    <input id="cust_car" disabled name="customer_care" ng-model="simulation.customer_care" round-number placeholder="placeholder" class="form-control input-md" type="text">
+                    <input id="cust_car" disabled name="customer_care" ng-model="simulation.customer_care"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
             </div>
 
@@ -229,11 +295,11 @@
                 <label class="col-md-6 control-label" for="mgmt_staff">Management Staff</label>
 
                 <div class="col-md-3">
-                    <input disabled ng-model="static_simulation.management_staff"  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input disabled ng-model="static_simulation.management_staff"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
 
                 <div class="col-md-3">
-                    <input id="mgmt_staff" disabled name="management_staff" ng-model="simulation.management_staff"  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input id="mgmt_staff" disabled name="management_staff" ng-model="simulation.management_staff"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
             </div>
 
@@ -241,22 +307,22 @@
             <div class="form-group">
                 <label class="col-md-6 control-label" for="fix_cost">Fixed Cost</label>
                 <div class="col-md-3">
-                    <input disabled ng-model="static_simulation.fixed_cost" round-number precision="5" placeholder="placeholder" class="form-control input-md" type="text">
+                    <input disabled ng-model="static_simulation.fixed_cost"   placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
 
                 <div class="col-md-3">
-                    <input id="fix_cost" disabled name="fixed_cost" ng-model="simulation.fixed_cost" round-number precision="5" placeholder="placeholder" class="form-control input-md" type="text">
+                    <input id="fix_cost" disabled name="fixed_cost" ng-model="simulation.fixed_cost"   placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
             </div>
 
             <div class="form-group">
                 <label class="col-md-6 control-label" for="parts_stock">Parts stock</label>
                 <div class="col-md-3">
-                    <input disabled round-number ng-model="static_simulation.parts_stock"  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input disabled  ng-model="static_simulation.parts_stock"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
 
                 <div class="col-md-3">
-                    <input id="parts_stock" disabled name="parts_stock" round-number ng-model="simulation.parts_stock"  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input id="parts_stock" disabled name="parts_stock"  ng-model="simulation.parts_stock"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
             </div>
 
@@ -264,11 +330,11 @@
                 <label class="col-md-6 control-label" for="int_cost">Interest Cost</label>
 
                 <div class="col-md-3">
-                    <input disabled round-number ng-model="static_simulation.interest_cost"  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input disabled  ng-model="static_simulation.interest_cost"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
 
                 <div class="col-md-3">
-                    <input id="int_cost" disabled name="interest_cost" round-number ng-model="simulation.interest_cost"  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input id="int_cost" disabled name="interest_cost"  ng-model="simulation.interest_cost"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
             </div>
 
@@ -285,11 +351,11 @@
         <div class="form-group">
             <label class="col-md-6 control-label" for="serv_thpt">Service Throughput</label>
             <div class="col-md-3">
-                <input disabled round-number ng-model="static_simulation.service_throughput"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input disabled  ng-model="static_simulation.service_throughput"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
 
             <div class="col-md-3">
-                <input id="serv_thpt" disabled name="service_throughput" round-number ng-model="simulation.service_throughput"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input id="serv_thpt" disabled name="service_throughput"  ng-model="simulation.service_throughput"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
         </div>
 
@@ -297,11 +363,11 @@
             <label class="col-md-6 control-label" for="serv_labour">Service Labour/Vehicle</label>
 
             <div class="col-md-3">
-                <input disabled ng-model="static_simulation.service_labour_vehicle"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input disabled ng-model="static_simulation.service_labour_vehicle"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
 
             <div class="col-md-3">
-                <input id="serv_labour" disabled name="service_labour_vehicle" ng-model="simulation.service_labour_vehicle"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input id="serv_labour" disabled name="service_labour_vehicle" ng-model="simulation.service_labour_vehicle"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
 
 
@@ -310,11 +376,11 @@
         <div class="form-group">
             <label class="col-md-6 control-label" for="serv_part">Service Parts/Vehicle</label>
             <div class="col-md-3">
-                <input disabled ng-model="static_simulation.service_parts_vehicle"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input disabled ng-model="static_simulation.service_parts_vehicle"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
 
             <div class="col-md-3">
-                <input id="serv_part" disabled name="service_parts_vehicle" ng-model="simulation.service_parts_vehicle"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input id="serv_part" disabled name="service_parts_vehicle" ng-model="simulation.service_parts_vehicle"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
         </div>
 
@@ -322,123 +388,134 @@
             <label class="col-md-6 control-label" for="tot_labour">Total Labour</label>
 
             <div class="col-md-3">
-                <input disabled round-number ng-model="static_simulation.total_labour"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input disabled  ng-model="static_simulation.total_labour"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
 
             <div class="col-md-3">
-                <input id="tot_labour" disabled name="total_labour" round-number ng-model="simulation.total_labour"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input id="tot_labour" disabled name="total_labour"  ng-model="simulation.total_labour"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
         </div>
 
         <div class="form-group">
             <label class="col-md-6 control-label" for="tot_parts">Total Parts</label>
             <div class="col-md-3">
-                <input disabled ng-model="static_simulation.total_parts"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input disabled ng-model="static_simulation.total_parts"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
 
             <div class="col-md-3">
-                <input id="tot_parts"disabled  name="total_parts" ng-model="simulation.total_parts"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input id="tot_parts"disabled  name="total_parts" ng-model="simulation.total_parts"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
         </div>
 
         <div class="form-group">
             <label class="col-md-6 control-label" for="profit_labour">Profit on labour</label>
             <div class="col-md-3">
-                <input disabled round-number ng-model="static_simulation.profit_on_labour"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input disabled  ng-model="static_simulation.profit_on_labour"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
 
             <div class="col-md-3">
-                <input id="profit_labour" disabled name="profit_on_labour" round-number ng-model="simulation.profit_on_labour"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input id="profit_labour" disabled name="profit_on_labour"  ng-model="simulation.profit_on_labour"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
         </div>
 
         <div class="form-group">
             <label class="col-md-6 control-label" for="profit_parts">Profit on Parts</label>
             <div class="col-md-3">
-                <input disabled ng-model="static_simulation.profit_on_parts"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input disabled ng-model="static_simulation.profit_on_parts"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
 
             <div class="col-md-3">
-                <input id="profit_parts" disabled name="profit_on_parts" ng-model="simulation.profit_on_parts"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input id="profit_parts" disabled name="profit_on_parts" ng-model="simulation.profit_on_parts"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
         </div>
 
             <div class="col-md-12">&nbsp;</div>
 
+            <div class="form-group">
+                <label class="col-md-6 control-label" for="btst">Bodyshop throughput ratio of service throughput</label>
+                <div class="col-md-3">
+                    <input disabled  ng-model="static_simulation.body_throughput_ratio"  placeholder="placeholder" round-number class="form-control input-md" type="text">
+                </div>
+
+                <div class="col-md-3">
+                    <input id="btst" ng-disabled="tab.body_shop" name="body_throughput_ratio"  ng-model="simulation.body_throughput_ratio"  placeholder="placeholder" round-number class="form-control input-md" type="text">
+                </div>
+            </div>
+
         <div class="form-group">
             <label class="col-md-6 control-label" for="body_thpt">Body throughput</label>
             <div class="col-md-3">
-                <input disabled round-number ng-model="static_simulation.body_throughput"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input disabled  ng-model="static_simulation.body_throughput"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
 
             <div class="col-md-3">
-                <input id="body_thpt" ng-disabled="tab.body_shop" name="body_throughput" round-number ng-model="simulation.body_throughput"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input id="body_thpt" ng-disabled="tab.body_shop" name="body_throughput"  ng-model="simulation.body_throughput"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
         </div>
 
         <div class="form-group">
             <label class="col-md-6 control-label" for="body_labour">Body labour/vehicle</label>
             <div class="col-md-3">
-                <input disabled ng-model="static_simulation.body_labour_vehicle"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input disabled ng-model="static_simulation.body_labour_vehicle"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
 
             <div class="col-md-3">
-                <input id="body_labour" disabled name="body_labour_vehicle" ng-model="simulation.body_labour_vehicle"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input id="body_labour" disabled name="body_labour_vehicle" ng-model="simulation.body_labour_vehicle"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
         </div>
 
         <div class="form-group">
             <label class="col-md-6 control-label" for="body_parts">Body Parts/Vehicle</label>
             <div class="col-md-3">
-                <input disabled ng-model="static_simulation.body_parts_vehicle"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input disabled ng-model="static_simulation.body_parts_vehicle"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
 
             <div class="col-md-3">
-                <input id="body_parts" disabled name="body_parts_vehicle" ng-model="simulation.body_parts_vehicle"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input id="body_parts" disabled name="body_parts_vehicle" ng-model="simulation.body_parts_vehicle"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
         </div>
 
         <div class="form-group">
             <label class="col-md-6 control-label" for="tot_labour2">Total Labour</label>
             <div class="col-md-3">
-                <input disabled round-number ng-model="static_simulation.body_total_labour"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input disabled  ng-model="static_simulation.body_total_labour"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
 
             <div class="col-md-3">
-                <input id="tot_labour2" disabled name="body_total_labour" round-number ng-model="simulation.body_total_labour"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input id="tot_labour2" disabled name="body_total_labour"  ng-model="simulation.body_total_labour"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
         </div>
 
         <div class="form-group">
             <label class="col-md-6 control-label" for="tot_parts2">Total Parts</label>
             <div class="col-md-3">
-                <input disabled round-number ng-model="static_simulation.body_total_parts"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input disabled  ng-model="static_simulation.body_total_parts"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
 
             <div class="col-md-3">
-                <input id="tot_parts2" disabled name="body_total_parts" round-number ng-model="simulation.body_total_parts"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input id="tot_parts2" disabled name="body_total_parts"  ng-model="simulation.body_total_parts"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
         </div>
 
         <div class="form-group">
             <label class="col-md-6 control-label" for="body_profit_on_labour">Profit on Labour</label>
             <div class="col-md-3">
-                <input disabled round-number ng-model="static_simulation.body_profit_on_labour"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input disabled  ng-model="static_simulation.body_profit_on_labour"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
 
             <div class="col-md-3">
-                <input id="body_profit_on_labour" disabled name="body_profit_on_labour" round-number ng-model="simulation.body_profit_on_labour"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input id="body_profit_on_labour" disabled name="body_profit_on_labour"  ng-model="simulation.body_profit_on_labour"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
         </div>
 
         <div class="form-group">
             <label class="col-md-6 control-label" for="profit_parts2">Profit on Parts</label>
             <div class="col-md-3">
-                <input disabled round-number precision="1" ng-model="static_simulation.body_profit_on_parts"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input disabled   ng-model="static_simulation.body_profit_on_parts"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
 
             <div class="col-md-3">
-                <input id="profit_parts2" disabled name="body_profit_on_parts" round-number precision="1" ng-model="simulation.body_profit_on_parts"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input id="profit_parts2" disabled name="body_profit_on_parts"   ng-model="simulation.body_profit_on_parts"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
         </div>
 
@@ -447,44 +524,44 @@
         <div class="form-group">
             <label class="col-md-6 control-label" for="serv_body_prof">Service & Bodyshop Gross Profit</label>
             <div class="col-md-3">
-                <input disabled round-number  ng-model="static_simulation.service_bodyshop_gross_profit"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input disabled   ng-model="static_simulation.service_bodyshop_gross_profit"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
 
             <div class="col-md-3">
-                <input id="serv_body_prof" disabled round-number name="service_bodyshop_gross_profit" ng-model="simulation.service_bodyshop_gross_profit"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input id="serv_body_prof" disabled  name="service_bodyshop_gross_profit" ng-model="simulation.service_bodyshop_gross_profit"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
         </div>
 
         <div class="form-group">
             <label class="col-md-6 control-label" for="spare_part_gross">Spare Parts Gross Profit</label>
             <div class="col-md-3">
-                <input disabled round-number  ng-model="static_simulation.spare_parts_gross_profit"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input disabled   ng-model="static_simulation.spare_parts_gross_profit"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
 
             <div class="col-md-3">
-                <input id="spare_part_gross" disabled round-number name="spare_parts_gross_profit" ng-model="simulation.spare_parts_gross_profit"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input id="spare_part_gross" disabled  name="spare_parts_gross_profit" ng-model="simulation.spare_parts_gross_profit"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
         </div>
 
         <div class="form-group">
             <label class="col-md-6 control-label" for="after_sale_gross">After Sales Gross Profit</label>
             <div class="col-md-3">
-                <input disabled round-number ng-model="static_simulation.after_sales_gross_profit"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input disabled  ng-model="static_simulation.after_sales_gross_profit"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
 
             <div class="col-md-3">
-                <input id="after_sale_gross" disabled round-number name="after_sales_gross_profit" ng-model="simulation.after_sales_gross_profit"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input id="after_sale_gross" disabled  name="after_sales_gross_profit" ng-model="simulation.after_sales_gross_profit"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
         </div>
 
         <div class="form-group">
-            <label class="col-md-6 control-label" for="over_all_profit">Overall Profit</label>
+            <label class="col-md-6 control-label" for="over_all_profit">Overall Profit from Dealership</label>
             <div class="col-md-3">
-                <input disabled ng-model="static_simulation.overall_profit"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input disabled ng-model="static_simulation.overall_profit"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
 
             <div class="col-md-3">
-                <input id="over_all_profit" disabled name="overall_profit" ng-model="simulation.overall_profit"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input id="over_all_profit" disabled name="overall_profit" ng-model="simulation.overall_profit"  placeholder="placeholder" round-number class="form-control input-md" type="text">
             </div>
         </div>
 
@@ -492,13 +569,13 @@
             <label class="col-md-6 control-label" for="after_sale_gross_age">After Sales Gross Profit %age</label>
             <div class="col-md-3">
                 <div class="input-group">
-                    <input disabled round-number ng-model="static_simulation.after_sales_gross_profit_age"  placeholder="placeholder" class="form-control input-md" type="text">
+                    <input disabled  ng-model="static_simulation.after_sales_gross_profit_age" precision="2"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                     <div class="input-group-addon">%</div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="input-group">
-                <input id="after_sale_gross_age" disabled round-number name="after_sales_gross_profit_age" ng-model="simulation.after_sales_gross_profit_age"  placeholder="placeholder" class="form-control input-md" type="text">
+                <input id="after_sale_gross_age" disabled  name="after_sales_gross_profit_age" precision="2" ng-model="simulation.after_sales_gross_profit_age"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                 <div class="input-group-addon">%</div>
             </div>
             </div>
@@ -506,35 +583,15 @@
         </form>
     </div>
 </div>
+<div>
+    <ul>
+        <li>Ideal Service Productivity taken as 3 days/car</li>
+        <li>Ideal Body Productivity taken as 7 days/car</li>
+        <li>Visit Frequency for 0~4 yrs old cars is taken as 3 /yr</li>
+        <li>Visit Frequency for 4~8 yrs old cars is taken as 2.5/yr</li>
+        <li>Visit Frequency for 8~12 yrs old cars is taken as 2/yr</li>
+        <li>Visit Frequency for >12 yrs old cars is taken as 2/yr</li>
 
-<div class="row">
-    <div class="col-md-3">
-        <canvas id="bar" class="chart chart-bar"
-                chart-data="chart_shop_profit.data" chart-labels="chart_shop_profit.labels" chart-series="chart_shop_profit.series">
-        </canvas>
-
-        <label>Service & Body Shop Profit</label>
-    </div>
-
-    <div class="col-md-3">
-        <canvas id="bar2" class="chart chart-bar"
-                chart-data="chart_parts_profit.data" chart-labels="chart_parts_profit.labels" chart-series="chart_parts_profit.series">
-        </canvas>
-        <label>Spare Parts Profit</label>
-    </div>
-
-    <div class="col-md-3">
-        <canvas id="bar3" class="chart chart-bar"
-                chart-data="chart_sales_profit.data" chart-labels="chart_sales_profit.labels" chart-series="chart_sales_profit.series">
-        </canvas>
-        <label>Gross After Sales Profit</label>
-    </div>
-
-    <div class="col-md-3">
-        <canvas id="bar4" class="chart chart-bar"
-                chart-data="chart_gross_profit.data" chart-labels="chart_gross_profit.labels" chart-series="chart_gross_profit.series">
-        </canvas>
-        <label>Gross Profit %age</label>
-    </div>
-
+    </ul>
 </div>
+
