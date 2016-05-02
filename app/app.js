@@ -1,5 +1,5 @@
 'use strict';
-angular.module('app',['ngRoute','app.routes','app.core','app.config', 'chart.js','ngAnimate','highcharts-ng'])
+angular.module('app',['ngRoute','app.routes','app.core','app.config', 'chart.js','ngAnimate'])
 
     .config(['ChartJsProvider', function (ChartJsProvider) {
         // Configure all charts
