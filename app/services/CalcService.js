@@ -7,10 +7,6 @@ angular.module('app.core')
 function calculateSimulation() {
     var factory = {};
 
-    factory.multiply = function(a, b) {
-        return a * b
-    }
-
     factory.isStaticSimulationSet = false;
     factory.static_simulation = {};
     factory.simulation = {
@@ -66,14 +62,9 @@ function calculateSimulation() {
         spare_parts_gross_profit : "",
         after_sales_gross_profit : "",
         overall_profit : "",
-        after_sales_gross_profit_age : ""
+        after_sales_gross_profit_age : "",
+        upselling_gross_profit:""
     };
-
-    //factory.roundNumber = function (number, precision){
-    //    precision = Math.abs(parseInt(precision)) || 0;
-    //    var multiplier = Math.pow(10, precision);
-    //    return (Math.round(number * multiplier) / multiplier);
-    //};
 
     factory.get_projected_yearly_load  = function() {
         //=(D2*0.4*D3)*3+(D2*0.3*D4)*2.5+(D2*0.12*D5)*2+(D2*0.08*D6)*2
@@ -205,7 +196,9 @@ function calculateSimulation() {
     }
 
     factory.get_ew_sales = function() {
-        var val = factory.simulation.service_throughput * (factory.simulation.ew_sale_total/100) * 40000;
+        //=30*(C25/100)*32000
+        var val = 30*(factory.simulation.ew_sale_total/100) *32000;
+            //factory.simulation.service_throughput * (factory.simulation.ew_sale_total/100) * 40000;
 
         if(isFinite(val)) {
             return val;
@@ -332,43 +325,48 @@ function calculateSimulation() {
         }
     }
 
-    factory.get_after_sales_gross_profit = function() {
-        //=I19+I20+D27+D29+D31
-        //console.log(" gross",factory.simulation.service_bodyshop_gross_profit);
-        //console.log(" parts",factory.simulation.spare_parts_gross_profit);
-        //console.log(" acc",factory.simulation.profit_acc_sales);
-        //console.log(" service",factory.simulation.profit_service_pack);
-        //console.log(" ew",factory.simulation.profit_ew_sale);
+    //factory.get_after_sales_gross_profit = function() {
+    //    //=I19+I20+D27+D29+D31
+    //    //console.log(" gross",factory.simulation.service_bodyshop_gross_profit);
+    //    //console.log(" parts",factory.simulation.spare_parts_gross_profit);
+    //    //console.log(" acc",factory.simulation.profit_acc_sales);
+    //    //console.log(" service",factory.simulation.profit_service_pack);
+    //    //console.log(" ew",factory.simulation.profit_ew_sale);
+    //
+    //
+    //    var val = Math.round(factory.simulation.service_bodyshop_gross_profit) +
+    //        Math.round(factory.simulation.spare_parts_gross_profit) +
+    //        Math.round(factory.simulation.profit_acc_sales) +
+    //        Math.round(factory.simulation.profit_service_pack) +
+    //        Math.round(factory.simulation.profit_ew_sale);
+    //     //factory.simulation.service_bodyshop_gross_profit + factory.simulation.spare_parts_gross_profit;
+    //
+    //    if(isFinite(val)) {
+    //        return val;
+    //    } else {
+    //        return 0;
+    //    }
+    //}
 
-
-        var val = Math.round(factory.simulation.service_bodyshop_gross_profit) +
-            Math.round(factory.simulation.spare_parts_gross_profit) +
-            Math.round(factory.simulation.profit_acc_sales) +
-            Math.round(factory.simulation.profit_service_pack) +
-            Math.round(factory.simulation.profit_ew_sale);
-         //factory.simulation.service_bodyshop_gross_profit + factory.simulation.spare_parts_gross_profit;
-
-        if(isFinite(val)) {
-            return val;
-        } else {
-            return 0;
-        }
-    }
-
-    factory.get_overall_profit = function() {
-        //=I21+((I2*0.1)*200000)
-        //console.log('overall', factory.simulation.after_sales_gross_profit);
-        var val = factory.simulation.after_sales_gross_profit + ((factory.simulation.service_throughput * 0.1) * 200000);
-
-        if(isFinite(val)) {
-            return val;
-        } else {
-            return 0;
-        }
-    }
+    //factory.get_overall_profit = function() {
+    //    //=I21+((I2*0.1)*200000)
+    //    //console.log('overall', factory.simulation.after_sales_gross_profit);
+    //    var val = factory.simulation.after_sales_gross_profit + ((factory.simulation.service_throughput * 0.1) * 200000);
+    //
+    //    if(isFinite(val)) {
+    //        return val;
+    //    } else {
+    //        return 0;
+    //    }
+    //}
 
     factory.get_after_sales_gross_profit_age = function() {
-        var val = (factory.simulation.after_sales_gross_profit / factory.simulation.overall_profit)*100;
+        //=H19+H20+H21
+        var val = factory.simulation.service_bodyshop_gross_profit+
+            factory.simulation.upselling_gross_profit +
+        factory.simulation.spare_parts_gross_profit;
+
+            //(factory.simulation.after_sales_gross_profit / factory.simulation.overall_profit)*100;
 
         if(isFinite(val)) {
             return val;
@@ -388,7 +386,9 @@ function calculateSimulation() {
     }
 
     factory.get_service_pack_sale = function() {
-        var val = factory.simulation.service_throughput*(factory.simulation.service_package_sale/100)*100000;
+        //=30*(C24/100)*119000
+        var val = 30*(factory.simulation.service_package_sale/100)*119000;
+            //factory.simulation.service_throughput*(factory.simulation.service_package_sale/100)*100000;
 
         if(isFinite(val)) {
             return val;
@@ -417,6 +417,18 @@ function calculateSimulation() {
         }
     }
 
+    factory.get_upselling_gross_profit = function() {
+        //==C27+C29+C31
+        var val = factory.simulation.profit_acc_sales+
+            factory.simulation.profit_service_pack+
+            factory.simulation.profit_ew_sale;
+
+        if(isFinite(val)) {
+            return val;
+        } else {
+            return 0;
+        }
+    }
 
     return factory;
 }

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog-theme-default.css">
     <link rel="stylesheet" href="views/style.css">
     <link rel="stylesheet" href="views/page.css">
+    <link rel="stylesheet" href="views/magic.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700,800' rel='stylesheet' type='text/css'>
     <title>Mercedes-Benz Simulation</title>
 </head>
@@ -26,7 +27,7 @@
 
         <div class="content-wrapper">
             <div class="content-inner">
-                <div ng-view class="page {{ pageClass }}">
+                <div ng-view>
 
                 </div>
             </div>
@@ -35,11 +36,13 @@
 </div>
 
 
+<script src="https://code.highcharts.com/highcharts.js"></script>
 <!-- ASSETS -->
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-animate/angular-animate.min.js"></script>
 <script src="bower_components/ng-dialog/js/ngDialog.min.js"></script>
 <script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="bower_components/highcharts-ng/dist/highcharts-ng.min.js"></script>
 <script src="bower_components/Chart.js/Chart.js"></script>
 <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
 <!-- / -->

@@ -1,5 +1,5 @@
 'use strict';
-angular.module('app',['ngRoute','app.routes','app.core','app.config', 'chart.js','ngAnimate'])
+angular.module('app',['ngRoute','app.routes','app.core','app.config', 'chart.js','ngAnimate','highcharts-ng'])
 
     .config(['ChartJsProvider', function (ChartJsProvider) {
         // Configure all charts
@@ -19,6 +19,15 @@ angular.module('app',['ngRoute','app.routes','app.core','app.config', 'chart.js'
                     "pointColor": "rgba(255,227,81,1)",
                     "pointStrokeColor": "#F6FD2D",
                     "pointHighlightFill": "#F6FD2D",
+                    "pointHighlightStroke": "rgba(151,187,205,0.8)"
+                }
+                ,
+                { // default
+                    "fillColor": "rgba(255,102,102)",
+                    "strokeColor": "rgba(151,0,0,1)",
+                    "pointColor": "rgba(151,0,0,1)",
+                    "pointStrokeColor": "#FF6666",
+                    "pointHighlightFill": "#FF6666",
                     "pointHighlightStroke": "rgba(151,187,205,0.8)"
                 }
             ]

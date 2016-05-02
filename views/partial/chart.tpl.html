@@ -1,5 +1,19 @@
 <div class="row graph">
-    <canvas id="bar" class="chart chart-bar" chart-options="chart_shop_profit.options"  width="600"
-            chart-data="chart_shop_profit.data" chart-labels="chart_shop_profit.labels" chart-series="chart_shop_profit.series">
-    </canvas>
+    <div class="col-md-4 col-sm-4 pull-left">
+        <!--<highchart id="chartProfit" config="highcharts_shop_profit"></highchart>-->
+        <canvas id="bar" class="chart chart-bar" chart-options="chart_shop_profit.options" height="200" width="604"
+                chart-data="chart_shop_profit.data" chart-labels="chart_shop_profit.labels" chart-series="chart_shop_profit.series">
+        </canvas>
+
+    </div>
+    <div class="col-md-2 col-sm-2 pull-left"></div>
+    <div class="col-md-6 col-sm-6 pull-right" style="width: 280px;">
+        <canvas id="bar2" class="chart chart-bar" chart-options="chart_overall_profit.options" height="200" width="304"
+                colours="chart_overall_profit.colours" chart-data="chart_overall_profit.data" chart-labels="chart_overall_profit.labels" chart-series="chart_overall_profit.series">
+        </canvas>
+        <!--<canvas id="doughnut" class="chart chart-doughnut" chart-options="grossProfit.options"-->
+        <!--chart-data="grossProfit.data" chart-labels="grossProfit.labels">-->
+        <!--</canvas>-->
+
+    </div>
 </div>

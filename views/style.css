@@ -9,7 +9,7 @@ body {
 }
 h2 {
   margin: 5px 0 10px !important;
-  font-size: 24px !important;
+  font-size: 20px !important;
   border-bottom: 1px solid #ABABAB;
   padding-bottom: 10px;
   font-weight: bold;
@@ -142,18 +142,18 @@ input {
   width: 224px;
 }
 .container-home .container-inner .content-wrapper .content-inner .overly-tile div.hotspot.hotspot-2 {
-  top: 334px;
-  left: 190px;
-  width: 264px;
+  top: 74px;
+  left: 528px;
+  width: 184px;
   -webkit-animation-delay: 0.25s;
   -moz-animation-delay: 0.25s;
   -ms-animation-delay: 0.25s;
   animation-delay: 0.25s;
 }
 .container-home .container-inner .content-wrapper .content-inner .overly-tile div.hotspot.hotspot-3 {
-  top: 74px;
-  right: 183px;
-  width: 184px;
+  top: 244px;
+  right: 30px;
+  width: 204px;
   -webkit-animation-delay: 0.5s;
   -moz-animation-delay: 0.5s;
   -ms-animation-delay: 0.5s;
@@ -161,16 +161,16 @@ input {
 }
 .container-home .container-inner .content-wrapper .content-inner .overly-tile div.hotspot.hotspot-4 {
   top: 274px;
-  left: 33px;
-  width: 184px;
+  left: 34px;
+  width: 185px;
   -webkit-animation-delay: 0.75s;
   -moz-animation-delay: 0.75s;
   -ms-animation-delay: 0.75s;
   animation-delay: 0.75s;
 }
 .ngdialog-close {
-  margin-right: 10px;
-  margin-top: 10px;
+  margin-right: 5px;
+  margin-top: 5px;
 }
 .ngdialog-close::before {
   color: grey !important;
@@ -201,15 +201,15 @@ button.btn:focus {
   height: auto !important;
   border-radius: 0;
   background: #fff !important;
-  padding: 40px;
+  padding: 0 40px 0;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 .ngdialog.ngdialog-theme-default .ngdialog-content .graph {
   border-top: 1px solid #ABABAB;
-  padding-top: 30px;
-  margin-top: 20px;
+  padding-top: 20px;
+  margin-top: 10px;
 }
 .ngdialog .ngdialog-theme-default .ngdialog-content {
   width: 99%;
@@ -236,16 +236,37 @@ button.btn:focus {
 .page a {
   margin-top: 0 !important;
 }
-.years-list ul {
-  text-align: left;
-  display: inline-block;
-  margin: 30px auto 0;
+/*.years-list{
+  ul{
+    text-align: left;
+    display: inline-block;
+    margin: 30px auto 0;
+    li{
+      font-size: 13px;
+      font-weight: 400;
+      margin-bottom: 5px;
+      list-style-type: decimal;
+    }
+  }
+}*/
+.last-list label {
+  font-weight: bold !important;
 }
-.years-list ul li {
-  font-size: 13px;
-  font-weight: 400;
-  margin-bottom: 5px;
-  list-style-type: decimal;
+.last-list input {
+  color: #3c763d !important;
+  background-color: #dff0d8 !important;
+  border-color: #d6e9c6 !important;
+}
+.last-list .input-group-addon {
+  color: #3c763d !important;
+  background-color: #dff0d8 !important;
+  border-color: #d6e9c6 !important;
+}
+.full-form {
+  padding: 40px;
+  background: #fff;
+  overflow-x: hidden;
+  height: 635px;
 }
 @-webkit-keyframes pulse {
   from {
