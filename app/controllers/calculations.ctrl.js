@@ -135,12 +135,12 @@ angular.module('app.core')
                         Math.round($scope.simulation.after_sales_gross_profit_age)
                     ]
                 ],
-                options: {
-                    //scaleShowGridLines: false,
-                    barShowStroke : false,
-                    barDatasetSpacing : 4,
-                    fontSize:24
-                }
+                //options: {
+                //    //scaleShowGridLines: false,
+                //    barShowStroke : false,
+                //    //barDatasetSpacing : 4,
+                //    fontSize:24
+                //}
             };
 
 
