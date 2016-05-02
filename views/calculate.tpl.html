@@ -111,7 +111,7 @@
                 </div>
 
                 <div class="col-md-3 col-sm-3">
-                    <input id="service_tat" ng-disabled="tab.productivity  && tab.body_shop" name="service_turn_around_time" ng-model="simulation.service_turn_around_time"  placeholder="placeholder" round-number class="form-control input-md" type="text">
+                    <input id="service_tat" ng-disabled="tab.productivity" name="service_turn_around_time" ng-model="simulation.service_turn_around_time"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
             </div>
 
@@ -122,7 +122,7 @@
                 </div>
 
                 <div class="col-md-3 col-sm-3">
-                    <input id="body_tat" ng-disabled="tab.productivity" name="body_turn_around_time" ng-model="simulation.body_turn_around_time"  placeholder="placeholder" round-number class="form-control input-md" type="text">
+                    <input id="body_tat" ng-disabled="tab.productivity && tab.body_shop" name="body_turn_around_time" ng-model="simulation.body_turn_around_time"  placeholder="placeholder" round-number class="form-control input-md" type="text">
                 </div>
             </div>
 

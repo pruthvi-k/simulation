@@ -110,11 +110,6 @@ angular.module('app.core')
 
         }, true);
 
-
-
-        $scope.labels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
-        $scope.series = ['Series A', 'Series B'];
-
         $scope.data = [
             [65, 59, 80, 81, 56, 55, 40],
             [28, 48, 40, 19, 86, 27, 90]
@@ -125,6 +120,7 @@ angular.module('app.core')
             $scope.chart_shop_profit = {
                 labels:['Service & Body Shop Profit','Spare Parts Profit', 'Gross After Sales Profit', 'Gross Profit %age'],
                 series:["Initial", "Changed"],
+                fillColor : ["#85c51f","#f9a7a9" ,"#f9a7a9" ,"#f9a7a9"],
                 data:[
                     [
                         Math.round(calcService.static_simulation.service_bodyshop_gross_profit),
@@ -138,7 +134,13 @@ angular.module('app.core')
                         Math.round($scope.simulation.after_sales_gross_profit),
                         Math.round($scope.simulation.after_sales_gross_profit_age)
                     ]
-                ]
+                ],
+                options: {
+                    //scaleShowGridLines: false,
+                    barShowStroke : false,
+                    barDatasetSpacing : 4,
+                    fontSize:24
+                }
             };
 
 
