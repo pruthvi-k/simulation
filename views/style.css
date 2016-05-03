@@ -86,7 +86,8 @@ input {
   background: #000;
 }
 .container-home .container-inner .header .header-inner {
-  -miz-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-top: 20px;
 }
@@ -112,11 +113,17 @@ input {
   text-decoration: none;
   color: #fff;
 }
+.container-home .container-inner .content-wrapper {
+  overflow: hidden;
+}
 .container-home .container-inner .content-wrapper .content-inner {
   background-color: #505050;
   width: 100%;
   height: 635px;
   position: relative;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .container-home .container-inner .content-wrapper .content-inner .overly-tile {
   background: #000000 url("../views/img/banner_main_3.png") no-repeat center center;
@@ -125,6 +132,9 @@ input {
   left: 0;
   width: 100%;
   height: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .container-home .container-inner .content-wrapper .content-inner .overly-tile div.hotspot {
   position: absolute;
@@ -204,19 +214,30 @@ a.btn:focus {
 }
 .ngdialog-overlay {
   display: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .ngdialog.ngdialog-theme-default {
   width: 1024px;
-  margin: 110px auto 0;
+  top: 110px;
+  left: 50%;
+  margin-left: -513px;
+  right: inherit;
+  bottom: inherit;
   height: 635px;
-  padding: 15px 0 0 0 !important;
+  overflow: hidden;
+  padding: 15px !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.7);
 }
 .ngdialog.ngdialog-theme-default .ngdialog-content {
-  background: #000000 url("../views/img/pop_bg.png") no-repeat center center !important;
-  width: 990px !important;
+  background: #ffffff url("../views/img/pop_bg.png") no-repeat center center !important;
+  width: 95% !important;
   margin: 0 auto;
-  height: 605px !important;
+  height: 100% !important;
   border-radius: 0;
   padding: 0 40px 0;
   -moz-box-sizing: border-box;
@@ -237,9 +258,6 @@ a.btn:focus {
 }
 .ngdialog.ngdialog-theme-default .ngdialog-content .row .pull-right {
   padding-right: 20px;
-}
-.ngdialog .ngdialog-theme-default .ngdialog-content {
-  width: 99%;
 }
 .page-about {
   background: #fff !important;
@@ -262,6 +280,20 @@ a.btn:focus {
 }
 .page a {
   margin-top: 0 !important;
+}
+a.close:link,
+a.close:visited {
+  color: grey;
+  font-size: 35px;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  opacity: 1;
+}
+a.close:link:hover,
+a.close:visited:hover {
+  text-decoration: none;
+  color: #d9534f;
 }
 /*.years-list{
   ul{
@@ -291,14 +323,22 @@ a.btn:focus {
 }
 .full-form {
   background: #000000 url("../views/img/pop_bg.png") no-repeat center center !important;
-  padding: 40px;
+  padding: 20px 40px 20px;
   overflow-x: hidden;
   height: 635px;
+  width: 100%;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .full-form .col-md-3,
 .full-form .col-md-6 {
   padding-right: 10px !important;
   padding-left: 10px !important;
+}
+.full-form .pull-right {
+  padding-bottom: 20px;
 }
 @-webkit-keyframes pulse {
   from {

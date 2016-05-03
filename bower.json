@@ -1,0 +1,33 @@
+{
+  "name": "simulation",
+  "homepage": "https://github.com/pruthvi-k/simulation",
+  "authors": [
+    "pruthvi-k <pruthvi.kajavadra@gmail.com>"
+  ],
+  "description": "calculate profit based on defined formulas",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "calculation",
+    "service",
+    "filter"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "~1.5.5",
+    "angular-chart.js": "~0.10.2",
+    "angular": "~1.5.5",
+    "angular-route": "~1.5.5",
+    "bootstrap": "~3.3.6",
+    "highcharts-ng": "~0.0.11",
+    "ng-dialog": "~0.6.0"
+  }
+}

@@ -20,15 +20,23 @@ angular.module('app.core')
 
         switch ($routeParams.type) {
             case 'customer-retention':
+                $scope.tab.label = "Customer Retention";
+                $scope.tab.type = "customer";
                 $scope.tab.customer_retention = false;
                 break;
             case 'productivity':
+                $scope.tab.label = "Productivity";
+                $scope.tab.type = "productivity";
                 $scope.tab.productivity = false;
                 break;
             case 'upselling':
+                $scope.tab.label = "Upselling";
+                $scope.tab.type = "upselling";
                 $scope.tab.upselling = false;
                 break;
             case 'body-shop':
+                $scope.tab.label = "Body Shop";
+                $scope.tab.type = "body-shop";
                 $scope.tab.body_shop = false;
                 break;
         }

@@ -1,9 +1,7 @@
 <div class="full-form">
+  <a href="#/" class="close">&#215;</a>
   <div class="row">
-    <div class="pull-right">
-      <a href="#/" class="btn btn-primary">Back</a>
-      <button class="btn btn-danger" ng-click="resetForm()">Reset</button>
-    </div>
+    <h2>{{tab.label}}</h2>
   </div>
   <div class="row">
     <div class="col-md-6 col-sm-6">
@@ -610,4 +608,8 @@
   </div>-->
 </div>
 </div>
+  <div class="pull-right">
+    <a href="#/" ng-click="showSimulationPopup(tab.type)" class="btn btn-primary" ng-controller="HomeController">Back</a>
+    <button class="btn btn-danger" ng-click="resetForm()">Reset</button>
+  </div>
 </div>
