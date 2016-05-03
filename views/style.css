@@ -8,15 +8,28 @@ body {
   background-color: #000 !important;
 }
 h2 {
-  margin: 5px 0 10px !important;
+  margin: 20px 0 20px !important;
   font-size: 20px !important;
   border-bottom: 1px solid #ABABAB;
   padding-bottom: 10px;
   font-weight: bold;
+  font-family: 'CorpoA';
 }
 h1 {
+  font-family: 'CorpoA';
   font-weight: bold;
+  border-bottom: 1px solid #ABABAB;
   font-size: 16px !important;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+@font-face {
+  font-family: 'CorpoA';
+  src: url('../views/fonts/CorpoA_0.eot');
+  src: url('../views/fonts/CorpoA_0.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../views/fonts/CorpoA_0.woff2') format('woff2'), /* Super Modern Browsers */ url('../views/fonts/CorporateA-Regular.woff') format('woff'), /* Pretty Modern Browsers */ url('../views/fonts/CorpoA_0.ttf') format('truetype'), /* Safari, Android, iOS */ url('../views/fonts/CorporateA-Regular.svg#svgFontName') format('svg');
+  
+  /* IE9 Compat Modes */
+  /* Legacy iOS */
 }
 .row {
   margin-bottom: 10px !important;
@@ -35,8 +48,8 @@ h1 {
 }
 .col-md-3,
 .col-md-6 {
-  padding-right: 10px !important;
-  padding-left: 10px !important;
+  padding-right: 20px !important;
+  padding-left: 20px !important;
 }
 .col-md-12 {
   padding-left: 0 !important;
@@ -179,10 +192,14 @@ input {
 .ngdialog-close:hover::before {
   color: #d9534f !important;
 }
-button.btn {
+button.btn,
+a.btn {
   outline: none;
+  background-color: #757575;
+  border: 1px solid #505050;
 }
-button.btn:focus {
+button.btn:focus,
+a.btn:focus {
   outline: none;
 }
 .ngdialog-overlay {
@@ -192,15 +209,15 @@ button.btn:focus {
   width: 1024px;
   margin: 110px auto 0;
   height: 635px;
-  padding: 0 0 0 0 !important;
+  padding: 15px 0 0 0 !important;
   background-color: rgba(0, 0, 0, 0.7);
 }
 .ngdialog.ngdialog-theme-default .ngdialog-content {
-  width: 960px !important;
+  background: #000000 url("../views/img/pop_bg.png") no-repeat center center !important;
+  width: 990px !important;
   margin: 0 auto;
-  height: auto !important;
+  height: 605px !important;
   border-radius: 0;
-  background: #fff !important;
   padding: 0 40px 0;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -209,7 +226,17 @@ button.btn:focus {
 .ngdialog.ngdialog-theme-default .ngdialog-content .graph {
   border-top: 1px solid #ABABAB;
   padding-top: 20px;
-  margin-top: 10px;
+  margin: 10px 5px 0;
+}
+.ngdialog.ngdialog-theme-default .ngdialog-content .graph .col-md-6 .chart-container canvas {
+  float: right;
+  margin-right: -20px;
+}
+.ngdialog.ngdialog-theme-default .ngdialog-content .graph .col-md-4 .chart-container canvas {
+  margin-left: -20px;
+}
+.ngdialog.ngdialog-theme-default .ngdialog-content .row .pull-right {
+  padding-right: 20px;
 }
 .ngdialog .ngdialog-theme-default .ngdialog-content {
   width: 99%;
@@ -263,10 +290,15 @@ button.btn:focus {
   border-color: #d6e9c6 !important;
 }
 .full-form {
+  background: #000000 url("../views/img/pop_bg.png") no-repeat center center !important;
   padding: 40px;
-  background: #fff;
   overflow-x: hidden;
   height: 635px;
+}
+.full-form .col-md-3,
+.full-form .col-md-6 {
+  padding-right: 10px !important;
+  padding-left: 10px !important;
 }
 @-webkit-keyframes pulse {
   from {

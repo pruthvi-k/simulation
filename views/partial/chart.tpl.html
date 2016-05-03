@@ -1,15 +1,17 @@
 <div class="row graph">
-    <div class="col-md-4 col-sm-4 pull-left">
+    <div class="col-md-4 col-sm-4">
         <!--<highchart id="chartProfit" config="highcharts_shop_profit"></highchart>-->
-        <canvas id="bar" class="chart chart-bar" chart-options="chart_shop_profit.options" height="200" width="604"
+        <canvas id="bar" class="chart chart-bar" chart-options="chart_shop_profit.options" height="200" width="550"
+                style="height: 200px;width: 600px" chart-options="chart_shop_profit.options"
+                chart-colours="chart_shop_profit.colours"
                 chart-data="chart_shop_profit.data" chart-labels="chart_shop_profit.labels" chart-series="chart_shop_profit.series">
         </canvas>
 
     </div>
-    <div class="col-md-2 col-sm-2 pull-left"></div>
-    <div class="col-md-6 col-sm-6 pull-right" style="width: 280px;">
-        <canvas id="bar2" class="chart chart-bar" chart-options="chart_overall_profit.options" height="200" width="304"
-                colours="chart_overall_profit.colours" chart-data="chart_overall_profit.data" chart-labels="chart_overall_profit.labels" chart-series="chart_overall_profit.series">
+    <div class="col-md-2 col-sm-2"></div>
+    <div class="col-md-6 col-sm-6">
+        <canvas id="bar2" class="chart chart-bar" chart-options="chart_overall_profit.options" height="200" width="340"
+                auto-legend chart-colours="chart_overall_profit.colours" chart-data="chart_overall_profit.data" chart-labels="chart_overall_profit.labels" chart-series="chart_overall_profit.series">
         </canvas>
         <!--<canvas id="doughnut" class="chart chart-doughnut" chart-options="grossProfit.options"-->
         <!--chart-data="grossProfit.data" chart-labels="grossProfit.labels">-->

@@ -111,200 +111,125 @@ angular.module('app.core')
 
         }, true);
 
-
-        $scope.flag = false;
-        var dlabels = {
-            enabled: true,
-            rotation: -90,
-            color: '#FFFFFF',
-            align: 'right',
-            y: 10, // 10 pixels down from the top
-            style: {
-                fontSize: '13px',
-                fontFamily: 'Verdana, sans-serif'
-            }
-        };
-
         $scope.setGraph = function() {
             $scope.chart_shop_profit = {
-                labels:['Service & Body Shop Profit', 'Spare Parts Profit'],
+                labels:['Service & Body Shop Profit', 'Spare Parts Profit', 'Upselling Profit'],
                 series:["Initial", "Changed"],
-                fillColor : ["#85c51f","#f9a7a9" ,"#f9a7a9" ,"#f9a7a9"],
+                "colours": [
+                    {
+                        "fillColor": "rgba(0, 157, 222, 1)",
+                        "strokeColor": "rgba(0,105,184,1)",
+                        "pointColor": "rgba(0,105,184,1)",
+                        "pointStrokeColor": "#009DDE",
+                        "pointHighlightFill": "#0069B8",
+                        "pointHighlightStroke": "rgba(151,187,205,0.8)"
+                    },
+                    {
+                        "fillColor": "rgba(221, 215, 64, 1)",
+                        "strokeColor": "rgba(194,188,49,1)",
+                        "pointColor": "rgba(194,188,49,1)",
+                        "pointStrokeColor": "#DDD740",
+                        "pointHighlightFill": "#C2BC31",
+                        "pointHighlightStroke": "rgba(151,187,205,0.8)",
+                    }
+                ],
                 data:[
-                                        [
-                        Math.round(calcService.simulation.service_bodyshop_gross_profit),
-                        Math.round(calcService.simulation.spare_parts_gross_profit)
-                    ],
                     [
                         Math.round(calcService.static_simulation.service_bodyshop_gross_profit),
-                        Math.round(calcService.static_simulation.spare_parts_gross_profit)
+                        Math.round(calcService.static_simulation.spare_parts_gross_profit),
+                        Math.round(calcService.static_simulation.upselling_gross_profit)
+                    ],
+                    [
+                        Math.round(calcService.simulation.service_bodyshop_gross_profit),
+                        Math.round(calcService.simulation.spare_parts_gross_profit),
+                        Math.round(calcService.simulation.upselling_gross_profit)
                     ]
                 ],
                 options: {
                     responsive: false,
                     maintainAspectRatio: false,
+                    isFixedWidth:false,
+
                 }
             };
 
             $scope.chart_overall_profit = {
+                multiTooltipTemplate: function(label) {
+                    return '---';
+                },
                 labels:['Overall Profit'],
                 series:["Initial", "Changed"],
-                fillColor : ["#f15c80","#f15c80"],
-                "colours": [{ // default
-                    "fillColor": "rgba(241, 92, 128, 1)",
-                    "strokeColor": "rgba(155,23,54,1)",
-                    "pointColor": "rgba(155,23,54,1)",
-                    "pointStrokeColor": "#f15c80",
-                    "pointHighlightFill": "#f15c80",
-                    "pointHighlightStroke": "rgba(151,187,205,0.8)"
-                },{ // default
-                    "fillColor": "rgba(153, 51, 255, 1)",
-                    "strokeColor": "rgba(77,11,144,1)",
-                    "pointColor": "rgba(77,11,144,1)",
-                    "pointStrokeColor": "#9933FF",
-                    "pointHighlightFill": "#9933FF",
-                    "pointHighlightStroke": "rgba(151,187,205,0.8)"
+                borderWidth:1,
+                "colours": [{
+                    "fillColor": "rgba(127, 168, 76, 1)",
+                    "strokeColor": "rgba(88,123,45,1)",
+                    "pointColor": "rgba(88,123,45,1)",
+                    "pointStrokeColor": "#7FA84C",
+                    "pointHighlightFill": "#587B2D",
+                    "pointHighlightStroke": "rgba(151,187,205,0.8)",
+                    borderWidth:1,
+                    pointBorderWidth:1
+                },{
+                    "fillColor": "rgba(243, 170, 56, 1)",
+                    "strokeColor": "rgba(219, 168, 35,1)",
+                    "pointColor": "rgba(219, 168, 35,1)",
+                    "pointStrokeColor": "#F3AA38",
+                    "pointHighlightFill": "#DBA823",
+                    "pointHighlightStroke": "rgba(151,187,205,0.8)",
+                    borderWidth:1,
+                    pointBorderWidth:1
                 }
                 ],
                 data:[
                     [
-                        Math.round(calcService.simulation.after_sales_gross_profit_age)
+                        Math.round(calcService.static_simulation.after_sales_gross_profit_age)
                     ],
                     [
-                        Math.round(calcService.static_simulation.after_sales_gross_profit_age)
+                        Math.round(calcService.simulation.after_sales_gross_profit_age)
                     ]
                 ],
                 options: {
                     responsive: false,
                     maintainAspectRatio: false,
+                    scaleBeginAtZero : false,
+                    //tooltipEvents: [],
+
+                    showTooltips : true,
+                    //showInlineValues : true,
+                    centeredInllineValues : false,
+                    //tooltipCaretSize : 6,
+                    //tooltipTemplate :'<%=value %>',
+
+                    onAnimationComplete: function () {
+                        //this.showTooltip(this.datasets[0].bars, true);
+                        //this.eachBars(function(bar){
+                        //    var tooltipPosition = bar.tooltipPosition();
+                        //    new Chart.Tooltip({
+                        //        x: Math.round(tooltipPosition.x),
+                        //        y: Math.round(tooltipPosition.y),//this.options.centeredInllineValues
+                        //            //? Math.round( bar.y + (bar.height() / 2) + ((this.options.tooltipFontSize + this.options.tooltipYPadding) / 2) )
+                        //            //: Math.round(tooltipPosition.y),
+                        //        xPadding: this.options.tooltipXPadding,
+                        //        yPadding: this.options.tooltipYPadding,
+                        //        fillColor: this.options.tooltipFillColor,
+                        //        textColor: this.options.tooltipFontColor,
+                        //        fontFamily: this.options.tooltipFontFamily,
+                        //        fontStyle: this.options.tooltipFontStyle,
+                        //        fontSize: this.options.tooltipFontSize,
+                        //        caretHeight: this.options.tooltipCaretSize,
+                        //        cornerRadius: this.options.tooltipCornerRadius,
+                        //        text :Chart.helpers.template(this.options.tooltipTemplate, bar),
+                        //        chart: this.chart
+                        //    }).draw();
+                        //});
+                    }
 
                 }
             };
         }
-        //$scope.highcharts_shop_profit = {};
-        //$scope.setGraph = function() {
-        //    $scope.highcharts_shop_profit.series = [];
-        //    if($scope.flag == false) {
-        //        $scope.flag = true;
-        //        $scope.highcharts_shop_profit = {
-        //            options: {
-        //                chart: {
-        //                    type: 'column'
-        //                },events: {
-        //                    redraw: function() {
-        //                        alert ('The chart is being redrawn');
-        //                    }
-        //
-        //                },
-        //                yAxis: {
-        //                    min: 100000,
-        //                    title: {
-        //                        text: ''
-        //                    }
-        //                },
-        //                legend: {
-        //                    enabled: false // Enable/Disable the legend
-        //                }
-        //            },
-        //            xAxis: {
-        //                categories: [
-        //                    'Service & Body Shop Profit', 'Spare Parts Profit'
-        //                ],
-        //                crosshair: true
-        //            },
-        //            plotOptions: {
-        //                series: {
-        //                    dataLabels: {
-        //                        align: 'left',
-        //                        enabled: true
-        //                    }
-        //                }
-        //            },
-        //            series: [
-        //                {
-        //                    name: '',
-        //                    data: [
-        //                        Math.round(calcService.static_simulation.service_bodyshop_gross_profit),
-        //                        Math.round(calcService.static_simulation.spare_parts_gross_profit)
-        //                    ],
-        //                    dataLabels: dlabels
-        //
-        //                }, {
-        //                    name: '',
-        //                    data: [
-        //                        Math.round($scope.simulation.service_bodyshop_gross_profit),
-        //                        Math.round($scope.simulation.spare_parts_gross_profit)
-        //                    ],
-        //                    dataLabels: dlabels
-        //                }
-        //            ],
-        //
-        //
-        //        }
-        //    } else {
-        //       // $scope.highcharts_shop_profit.options.chart.type = "column";
-        //
-        //        $scope.highcharts_shop_profit.series[1] =  {
-        //            name: '',
-        //            data: [
-        //                Math.round($scope.simulation.service_bodyshop_gross_profit),
-        //                Math.round($scope.simulation.spare_parts_gross_profit)
-        //            ],
-        //            dataLabels: dlabels
-        //        };
-        //        ////angular.forEach(seriesArray, function(value, key) {
-        //        //    seriesArray[0] = {
-        //        //        name: '',
-        //        //        data: [
-        //        //            Math.round(calcService.static_simulation.service_bodyshop_gross_profit),
-        //        //            Math.round(calcService.static_simulation.spare_parts_gross_profit)
-        //        //        ],
-        //        //        dataLabels: dlabels
-        //        //
-        //        //    };
-        //        //seriesArray[1] = {
-        //        //    name: '',
-        //        //    data: [
-        //        //        Math.round($scope.simulation.service_bodyshop_gross_profit),
-        //        //        Math.round($scope.simulation.spare_parts_gross_profit)
-        //        //    ],
-        //        //    dataLabels: dlabels
-        //        //
-        //        //};
-        //        //
-        //        //
-        //        //    console.log('', seriesArray);
-        //       // });
-        //        //forEach(seriesArray, index, val) {}
-        //        //seriesArray[rndIdx].data = seriesArray[rndIdx].data.concat([1, 10, 20])
-        //       //console.log(seriesArray);
-        //
-        //        //$scope.highcharts_shop_profit.series = seriesData;
-        //    }
-        //
-        //    //new Highcharts.Chart($scope.highcharts_shop_profit);
-        //    //$scope.$apply();
-        //    console.log("highchart", $scope.highcharts_shop_profit.series);
 
-        //$scope.chart_shop_profit = {};
-        //$scope.grossProfit = {};
-        //$scope.chart_shop_profit = {
-        //    labels:['Service & Body Shop Profit','Spare Parts Profit', 'Gross After Sales Profit'],
-        //    series:["Initial", "Changed"],
-        //    data:[
-        //        [
-        //            Math.round(calcService.static_simulation.service_bodyshop_gross_profit),
-        //            Math.round(calcService.static_simulation.spare_parts_gross_profit),
-        //            Math.round(calcService.static_simulation.after_sales_gross_profit),
-        //            //Math.round(calcService.static_simulation.after_sales_gross_profit_age)
-        //        ],
-        //        [
-        //            Math.round($scope.simulation.service_bodyshop_gross_profit),
-        //            Math.round($scope.simulation.spare_parts_gross_profit),
-        //            Math.round($scope.simulation.after_sales_gross_profit),
-        //            //Math.round($scope.simulation.after_sales_gross_profit_age)
-        //        ]
-        //    ],
+
+
         //    options: {
         //
         //        //responsive: false,
@@ -315,35 +240,6 @@ angular.module('app.core')
         //
         //    }
         //};
-        //
-        //var diff = 0;
-        //if(Math.round(calcService.static_simulation.after_sales_gross_profit_age) >
-        //    Math.round($scope.simulation.after_sales_gross_profit_age))
-        //{
-        //    diff = Math.round(calcService.static_simulation.after_sales_gross_profit_age)-Math.round($scope.simulation.after_sales_gross_profit_age);
-        //} else {
-        //    diff = Math.round($scope.simulation.after_sales_gross_profit_age) -  Math.round(calcService.static_simulation.after_sales_gross_profit_age);
-        //}
-        //
-        //$scope.grossProfit = {
-        //    title:"Gross Profit %age",
-        //    labels: ["Initial", "Changed", "Difference"],
-        //    data: [
-        //        Math.round(calcService.static_simulation.after_sales_gross_profit_age),
-        //        Math.round($scope.simulation.after_sales_gross_profit_age),
-        //        diff
-        //    ],
-        //    options: {
-        //        title:"Gross Profit %age"
-        //    }
-        //};
-        //console.log($scope.grossProfit);
-
-        //}
-
-
-
-        //, 'Gross Profit %age'
 
         $scope.resetForm = function(){
             calcService.simulation = angular.copy(calcService.static_simulation);
