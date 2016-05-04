@@ -70,8 +70,8 @@ angular.module('app.core')
             calcService.simulation.body_profit_on_parts = calcService.get_body_profit_on_parts();
             //projected_yearly_load : $scope.get_projected_yearly_load(),
 
-            calcService.simulation.no_of_service_bays = calcService.get_no_of_service_bays();
-            calcService.simulation.no_of_bodyshop_bays = calcService.get_no_of_bodyshop_bays();
+            //calcService.simulation.no_of_service_bays = calcService.get_no_of_service_bays();
+            //calcService.simulation.no_of_bodyshop_bays = calcService.get_no_of_bodyshop_bays();
             calcService.simulation.technicians = calcService.get_technicians();
             calcService.simulation.service_advisor = calcService.get_service_advisor();
             calcService.simulation.customer_care = calcService.get_customer_care();
@@ -106,7 +106,7 @@ angular.module('app.core')
             calcService.simulation.body_throughput = calcService.get_body_throughput();
 
             var profit = Math.round(calcService.simulation.after_sales_gross_profit_age);
-            if(profit>=13706696 && calcService.isStaticSimulationSet == false) {
+            if(profit>=6218782 && calcService.isStaticSimulationSet == false) {
                 $scope.static_simulation = angular.copy(calcService.simulation);
                 calcService.static_simulation = $scope.static_simulation;
                 //calcService.static_simulation.after_sales_gross_profit_age = calcService.simulation.after_sales_gross_profit_age;

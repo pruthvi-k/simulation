@@ -10,15 +10,15 @@ function calculateSimulation() {
     factory.isStaticSimulationSet = false;
     factory.static_simulation = {};
     factory.simulation = {
-        vehicle_park: 4500,
-        customer_retention_0_4_yrs : 93, //%
-        customer_retention_4_8_yrs : 73, //%
-        customer_retention_8_12_yrs : 30, //%
-        customer_retention_12_yrs : 31, //%
+        vehicle_park: 3500,
+        customer_retention_0_4_yrs : 86, //%
+        customer_retention_4_8_yrs : 72, //%
+        customer_retention_8_12_yrs : 25, //%
+        customer_retention_12_yrs : 25, //%
         projected_yearly_load : "",
 
-        service_turn_around_time : 3,
-        body_turn_around_time : 7,
+        service_turn_around_time : 4,
+        body_turn_around_time : 8,
 
         accessory_sales_car : 10000,
         ew_sale_total:10,
@@ -30,8 +30,8 @@ function calculateSimulation() {
         ew_sales : "",
         profit_ew_sale:"",
 
-        no_of_service_bays : "",
-        no_of_bodyshop_bays : "",
+        no_of_service_bays : 20,
+        no_of_bodyshop_bays : 15,
         technicians : "",
         service_advisor : "",
         customer_care : "",
@@ -49,7 +49,7 @@ function calculateSimulation() {
         profit_on_labour : "",
         profit_on_parts : "",
 
-        body_throughput_ratio:20,
+        body_throughput_ratio:12,
         body_throughput : "",
         body_labour_vehicle : 25000,
         body_parts_vehicle : 50000,
@@ -83,15 +83,15 @@ function calculateSimulation() {
 
 
 
-    factory.get_no_of_service_bays = function() {
-        var val = factory.simulation.service_throughput / 25 / 2;
-
-        if(isFinite(val)) {
-            return val;
-        } else {
-            return 0;
-        }
-    }
+    //factory.get_no_of_service_bays = function() {
+    //    var val = factory.simulation.service_throughput / 25 / 2;
+    //
+    //    if(isFinite(val)) {
+    //        return val;
+    //    } else {
+    //        return 0;
+    //    }
+    //}
 
     factory.get_accessory_sales = function() {
         //=(H2+H11)*C23*0.2
@@ -104,15 +104,15 @@ function calculateSimulation() {
         }
     }
 
-    factory.get_no_of_bodyshop_bays = function() {
-        var val = factory.simulation.body_throughput/7;
-
-        if(isFinite(val)) {
-            return val;
-        } else {
-            return 0;
-        }
-    }
+    //factory.get_no_of_bodyshop_bays = function() {
+    //    var val = factory.simulation.body_throughput/7;
+    //
+    //    if(isFinite(val)) {
+    //        return val;
+    //    } else {
+    //        return 0;
+    //    }
+    //}
 
     factory.get_technicians = function() {
         //=H2/25/1.2+H11/10
